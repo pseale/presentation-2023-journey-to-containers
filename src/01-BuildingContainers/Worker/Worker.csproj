@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Worker-2fb0a4c0-5ec9-463a-aeb7-9532ec3ba29b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.*" />
+
+    <!-- To build containers, this package is required for non-web projects -->
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="7.0.401" />
+  </ItemGroup>
+</Project>

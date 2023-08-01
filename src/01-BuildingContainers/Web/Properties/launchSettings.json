@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "04_UsingPublishContainerMsbuildTarget": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55502;http://localhost:55503"
+    }
+  }
+}

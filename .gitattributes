@@ -1,0 +1,2 @@
+# useful for running shell scripts from WSL when the repo is checked out on Windows
+*.sh eol=lf

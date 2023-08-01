@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bad-website
+  namespace: sigterm-test
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /bad(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: bad-website
+                port:
+                  number: 5001

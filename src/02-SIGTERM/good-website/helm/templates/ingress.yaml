@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: good-website
+  namespace: sigterm-test
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /good(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: good-website
+                port:
+                  number: 5000
