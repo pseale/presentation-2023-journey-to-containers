@@ -1,6 +1,6 @@
 # Introduction
 
-This repo contains demos in `src`, and these presentation notes (below).
+This repo contains demos in `src`, the slides at [JourneyToContainers_slides.pdf](./JourneyToContainers_slides.pdf), and these presentation notes (below).
 
 # Journey to Containers (in Azure)
 
