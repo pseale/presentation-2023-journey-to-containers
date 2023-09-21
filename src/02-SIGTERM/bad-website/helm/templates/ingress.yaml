@@ -5,6 +5,7 @@ metadata:
   namespace: sigterm-test
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/service-upstream: "true" # https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md#service-upstream
 spec:
   ingressClassName: nginx
   rules:
