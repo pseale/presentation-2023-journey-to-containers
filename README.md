@@ -45,14 +45,22 @@ The year is 2020:
   5. Migrate test projects to dotnet 7
   6. Migrate remaining projects to dotnet 7, including a full ASP.NET MVC -> aspnetcore migration
 
+#### Immediate improvement
+
 - major immediate cost savings: Windows -> Linux
 - major immediate cost savings: leveraging spot VMs (~50-90% discount)
 - major cost savings, after gaining confidence in scaling metrics: scale-to-zero
 
 - processing time improvement: faster autoscaling
 - minor: deployments are 3x-5x faster, and less flaky
+
+#### More improvements
+
 - improved monitoring
 - better vulnerability scanning
+
+#### Not all sunshine and rainbows
+
 - 🚫🚫 we have had to bootstrap all Kubernetes ecosystem knowledge
 - 🚫 yearly deprecation cycle (Kubernetes-specific)
 - 🚫 early mistakes haunt us still (Persistent Volumes)
@@ -66,18 +74,19 @@ The year is 2020:
   - “why are there 200 Pending pods” (Azure VM allocation failures (invisible))
   - why has calico restarted 300 times
 
-Ongoing Tweaks
+#### Ongoing Tweaks
 
 - Container CPU/RAM right-sizing
 - Autoscaling - CPU to message-based scaling to complex PromQL-based scaling
 
-Future (unrealized/hypothetical) benefits of living the container life:
+#### Future (unrealized/hypothetical) benefits of living the container life:
 
 - large ecosystem with a bright future
 - leverage savings of ARM over x64 (roughly ~20% savings right now?)
 - ratcheting up the security many ways - read-only filesystem, limited user permissions, ephemeral temp storage, CPU and RAM limits (preventing noisy neighbor problems), clamp down the network
 
-Security vulnerability scanners:
+#### Security vulnerability scanners:
+
 - Reduce attack surface - dotnet/runtime-deps instead of ubuntu
 - Microsoft-maintained base images are always improving
 - ChainGuard base images
@@ -92,7 +101,7 @@ Security vulnerability scanners:
   - e.g. community has healed around Docker Desktop moving to a paid model
   - e.g. community has provided simpler alternatives to Kubernetes
 
-#### Choosing an Azure service
+### Choosing an Azure service
 
 In 2023, mostly for ecosystem benefits, for the typical enterprise .NET app, choose either:
 
@@ -103,7 +112,7 @@ In 2023, mostly for ecosystem benefits, for the typical enterprise .NET app, cho
 - Azure Kubernetes Service - "budget one full time resource just to manage"
 - 🚫 I have a vendetta against Azure Functions
 
-#### Docker Desktop, Rancher Desktop, Podman Desktop
+### Docker Desktop, Rancher Desktop, Podman Desktop
 
 I put myself through a few hours of punishment evaluating all of them some months ago, and here are my findings:
 
